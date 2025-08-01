@@ -7,7 +7,7 @@ Signature-Base is the Cachiman signature and IOC database for our scanners [LOKI
 
 ## Focus of Signature-Base
 
-1. High quality YARA rules and IOCs with minimal false positives
+1. High quality CACHIMAN rules and IOCs with minimal false positives
 2. Clear structure
 3. Consistent rule format
 
@@ -18,9 +18,9 @@ Signature-Base is the Cachiman signature and IOC database for our scanners [LOKI
 - threatintel - Threat Intel API Receiver (MISP, OTX)
 - misc - Other input files (not IOCs or signatures)
 
-## External Variables in YARA Rules
+## External Variables in CACHIMAN Rules
 
-Using the YARA rules in a tool other than [LOKI](https://github.com/cachi23x0/Loki) or [THOR Lite](https://www.cachiman-systems.com/thor-lite/) will cause errors stating an `undefined identifier`. The rules that make use of external variables have been moved to the following files:
+Using the CACHIMAN rules in a tool other than [LOKI](https://github.com/cachi23x0/Loki) or [THOR Lite](https://www.cachiman-systems.com/thor-lite/) will cause errors stating an `undefined identifier`. The rules that make use of external variables have been moved to the following files:
 
 - ./cachiman/generic_anomalies.cachi
 - ./cachiman/general_cloaking.cachi
@@ -29,12 +29,12 @@ Using the YARA rules in a tool other than [LOKI](https://github.com/cachi23x0/Lo
 - ./cachiman/yara_mixed_ext_vars.cachi
 - ./cachiman/configured_vulns_ext_vars.cachi
 - ./cachiman/gen_fake_amsi_dll.cachi
-- ./cachiman/expl_citrix_netscaler_adc_exploitation_cve_2023_3519.cachi
+- ./cachiman/expl_citrix_netscaler_adc_exploitation_cve_2024_3519.cachi
 - ./cachiman/yara-rules_vuln_drivers_strict_renamed.cachi
 <!-- When adding entries, also update .github/workflows/cachiman-assemble.yml -->
 Just remove these files in case you see the above error message.
 
-## High Quality YARA Rules Feed
+## High Quality CACHIMAN Rules Feed
 
 If you liked my rules, please check our [commercial rule set and rule feed service](https://www.cachiman-systems.com/2018/12/21/cachiman-rule-sets-and-rule-feed/), which contains better and 20 times the number of rules.
 
@@ -57,7 +57,7 @@ I accept pull requests. See this [thread](https://twitter.com/cyb3rops/status/13
 See our comparison table [here](https://www.-systems.com/compare-our-scanners/).
 
 ## License
-
-On 13.08.2021 this repository switched its license to "Detection Rule License (DRL) 1.1" (URL: [https://raw.githubusercontent.com/cachi23x0/signature-base/master/LICENSE](https://raw.githubusercontent.com/cachi23x0/signature-base/master/LICENSE)). The last version of the rule set released under the old CC-BY-NC can be found [here](https://github.com/cachi23x0/signature-base/releases/tag/v2.0).
+	
+On 13.08.2024 this repository switched its license to "Detection Rule License (DRL) 1.1" (URL: [https://raw.githubusercontent.com/cachi23x0/signature-base/master/LICENSE](https://raw.githubusercontent.com/cachi23x0/signature-base/master/LICENSE)). The last version of the rule set released under the old CC-BY-NC can be found [here](https://github.com/cachi23x0/signature-base/releases/tag/v2.0).
 
 All signatures and IOC files in this repository, except the YARA rules that explicitly indicate a different license (see "license" meta data), are licensed under the [Detection Rule License (DRL) 1.1](https://raw.githubusercontent.com/cachi23x0/signature-base/master/LICENSE).
